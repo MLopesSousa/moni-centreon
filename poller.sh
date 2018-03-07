@@ -43,8 +43,11 @@ function start() {
                 verifica_datasource $i
         done
 
-        STR_RETORNO=$(cat $TMP_FILE_ALERT | sed 's/#/ /g; s/"//g' |tr '\n' ' ')
-        echo ${STR_RETORNO:0:250} |nc $IP_NAGIOS $PORTA_NAGIOS
+        if [ $(grep -v '^$' $TMP_FILE_ALERT |wc -l) -gt 1 ]; then
+                STR_RETORNO=$(cat $TMP_FILE_ALERT | sed 's/#/ /g; s/"//g' |tr '\n' ' ')
+                #echo ${STR_RETORNO:0:250} |nc $IP_NAGIOS $PORTA_NAGIOS
+                echo ${STR_RETORNO:0:250}
+        fi
 
         rm -rf $TMP_FILE $TMP_FILE_ALERT
 }
