@@ -1,0 +1,2 @@
+2018-03-07T08:20:00-0300 DATASOURCE PRODUCAO-INTRANET sd2jvp27.sefaz-ce.gov.br jboss-eap-6.1 CEVR-WEB2 sd2jvp27-inst01 cevrOracleExpurgoPool 200 150 200 "java:/jdbc/CEVREXPURGO"
+2018-03-07T08:20:00-0300 DATASOURCE PRODUCAO-INTRANET sd2jvp27.sefaz-ce.gov.br jboss-eap-6.1 CEVR-WEB2 sd2jvp27-inst01 cevrOracleMineracaoPool 150 100 150 "java:/jdbc/CEVRMINERACAO"
